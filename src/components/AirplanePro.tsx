@@ -6,7 +6,7 @@ type Props = {
   className?: string;
 };
 
-const AirplanePro: React.FC<Props> = ({ className = "w-32 h-32 rotate-[-45deg]" }) => {
+const AirplanePro: React.FC<Props> = ({ className = "w-20 h-20 md:w-32 md:h-32 rotate-[-45deg]" }) => {
   return (
     <motion.svg
       viewBox="0 0 160 160"

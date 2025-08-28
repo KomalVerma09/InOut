@@ -1,10 +1,10 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { TrendingUp, TrendingDown, X, BarChart3 } from 'lucide-react';
 
 const FloatingTokenRates = () => {
   const [isExpanded, setIsExpanded] = useState(false);
-  const [isVisible, setIsVisible] = useState(true);
+  // const [isVisible, setIsVisible] = useState(true);
   const [tokenData, setTokenData] = useState({
     price: 0.089,
     change: 12.7,
@@ -33,7 +33,7 @@ const FloatingTokenRates = () => {
         className="relative"
         onHoverStart={() => setIsExpanded(true)}
         onHoverEnd={() => setIsExpanded(false)}
-        onClick={() => setIsExpanded(prev => !prev)}
+        onClick={() => setIsExpanded(true)}
       >
         {/* Floating Button */}
         <AnimatePresence>
@@ -72,7 +72,16 @@ const FloatingTokenRates = () => {
                 animate={{ y: 0 }}
                 transition={{ duration: 0.3, delay: 0.1 }}
               >
-                <div className="flex items-center justify-between mb-4">
+                <button
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    setIsExpanded(false)
+                  }}
+                  className="absolute top-2 right-2 p-1 rounded-full hover:bg-white/10 transition"
+                >
+                  <X className="w-4 h-4 text-gray-300 hover:text-white" />
+                </button>
+                <div className="flex items-center justify-between mb-4 mt-2">
                   <div className="flex items-center space-x-2">
                     <div className="w-8 h-8 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full flex items-center justify-center">
                       <span className="font-orbitron text-xs font-bold text-white">IO</span>
