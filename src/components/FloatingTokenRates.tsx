@@ -33,6 +33,7 @@ const FloatingTokenRates = () => {
         className="relative"
         onHoverStart={() => setIsExpanded(true)}
         onHoverEnd={() => setIsExpanded(false)}
+        onClick={() => setIsExpanded(prev => !prev)}
       >
         {/* Floating Button */}
         <AnimatePresence>

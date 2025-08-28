@@ -20,9 +20,19 @@ const Landing = () => {
           <div className="grid lg:grid-cols-6 md:grid-cols-4 sm:grid-cols-3 grid-cols-2 justify-between items-center h-16 gap-5">
             {/* Logo */}
             <div className="flex items-center">
+              {/* Mobile logo*/}
+              <img
+                src="https://raw.githubusercontent.com/inquisitiveScholar/images/refs/heads/main/InOut-Images/logo.png"
+                alt="Mobile Logo"
+                className="block sm:hidden"
+                style={{ maxHeight: '60px' }}
+              />
+
+              {/* Desktop logo */}
               <img
                 src="https://in-out.live/Appland/assets/images/logo/logo-6.png"
-                alt=""
+                alt="Desktop Logo"
+                className="hidden sm:block"
                 style={{ maxHeight: '60px' }}
               />
             </div>
@@ -78,7 +88,7 @@ const Landing = () => {
           )}
         </AnimatePresence>
 
-        
+
       </nav>
 
       {/* Sections */}

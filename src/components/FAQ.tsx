@@ -49,7 +49,7 @@ const FAQ = () => {
             Frequently Asked Questions
           </h2>
           <p className="text-xl text-purple-200 text-center max-w-3xl mx-auto mb-12">
-            Everything you need to know about our revolutionary crypto finance platform
+            Everything you need to know about our revolutionary InOut finance ecosystem
           </p>
 
           <div className="max-w-4xl mx-auto space-y-4">
